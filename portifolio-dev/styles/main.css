@@ -1,51 +1,11 @@
 main{
-    padding: 72px 120px;
+    padding-inline: 120px;
+    margin-bottom: 144px;
     background-color: var(--base-gray-200);
+
+    &> section:nth-child(1){
+        margin-top: 72px;
+    }
+
 }
 
-#header-my-work{
-    span{
-        font: var(--subtitle);
-        color: var(--main-red);
-    }
-
-    h3{
-       font: var(--title-md); 
-       color: var(--base-gray-600);
-       margin-top: 8px;
-    }
-}
-
-#card-my-work{
-    margin-top: 56px;
-    figure{
-        width: 330px;
-        height: 280px;
-        background-color: var(--base-gray-300);
-        padding: 12px;
-        border-radius: 12px;
-    }
-
-    figure img{
-        width: 306px;
-        height: 156px;
-        object-fit: cover;
-        border-radius: 8px;
-    }
-
-    figcaption{
-        text-align: left;
-        margin-top: 24px;
-    }
-
-    figcaption p{
-        font: var(--title-sm);
-        color: var(--base-gray-600);
-        margin-bottom: 8px;
-    }
-
-    figcaption span{
-        font: var(--text-sm);
-        color: var(--base-gray-500);
-    }
-}

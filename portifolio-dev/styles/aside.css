@@ -1,0 +1,28 @@
+aside{
+    background-color: var(--base-gray-100);
+
+    &> section:nth-child(1){
+        padding-top: 88px;
+    }
+    &> section:nth-child(2){
+        width: 888px;
+        padding-bottom: 120px;
+    }
+}
+
+#card-services{
+    margin-top: 56px;
+    figure{
+        background-color: transparent;
+        border: 2px solid var(--base-gray-200);
+        width: 280px;
+        height: auto;
+        padding: 20px;
+        text-align: left;
+    }
+    img{
+        width: 48px;
+        height: 48px;
+        object-fit: contain;
+    }
+}
