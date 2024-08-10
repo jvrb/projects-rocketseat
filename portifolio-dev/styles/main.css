@@ -1,0 +1,11 @@
+main{
+    padding-inline: 120px;
+    margin-bottom: 144px;
+    background-color: var(--base-gray-200);
+
+    &> section:nth-child(1){
+        margin-top: 72px;
+    }
+
+}
+
