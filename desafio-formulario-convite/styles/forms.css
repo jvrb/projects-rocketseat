@@ -1,0 +1,60 @@
+@import url("./fields/index.css");
+
+form{
+    margin-top: 2.5rem;
+}
+
+fieldset{
+    border: 0;
+}
+
+fieldset + fieldset {
+    margin-top: 3rem;
+}
+
+legend {
+    font: var(--heading-sm);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+legend > img {
+    width: 24px;
+    height: 24px;
+    opacity: .5;
+}
+
+.input-wrapper {
+    margin-top: 1.5rem;
+
+    & label {
+        padding-bottom: 12px;
+    }
+}
+
+fieldset:nth-child(3){
+    padding-bottom: 48px;
+    border-bottom: 1px solid var(--input-stroke);
+}
+
+button {
+    margin-left: auto;
+    margin-top: 3rem;
+    width: 11.06rem;
+    height: 3rem;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--brand-dark);
+    color: var( --text-heading);
+    border: 0;
+    border-radius: .5rem;
+    font: var(--body-md);
+
+    & img {
+        width: 20px;
+        height: 20px;
+    }
+}

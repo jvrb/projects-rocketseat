@@ -1,0 +1,110 @@
+input,
+textarea {
+    appearance: none;
+    width: 100%;
+    border-radius: 0.5rem;
+    padding: 0.81rem 1rem;
+    border: 2px solid transparent;
+    outline: 1px solid var(--input-stroke);
+    background-color: var(--input-base);
+
+    font: var(--body-sm);
+    color: var(--text-heading);
+
+    &[required] + .error{
+        display: flex;
+        align-items: center;
+        font: var(--body-xs);
+        gap: .5rem;
+        margin-top: .5rem;
+        color: var(--danger);
+        & img {
+            width: 1rem;
+            height: 1rem;
+        }
+    }
+
+    &:not(:focus):valid + .error{
+        display: none;
+    }
+}
+
+input::placeholder,
+textarea::placeholder {
+    font: var(--body-md);
+    color: var(--input-placeholder);
+}
+
+label {
+    display: block;
+    font: var(--body-sm);
+}
+
+.flex {
+    gap: 1rem;
+}
+
+input[type="datetime-local"] {
+    position: relative;
+
+    &::-webkit-calendar-picker-indicator {
+        opacity: 0;
+    }
+
+    &::-webkit-datetime-edit {
+        text-transform: uppercase;
+        font: var(--body-md);
+        color: var(--input-placeholder);
+    }
+}
+
+.terms {
+    padding-top: 40x;
+}
+
+.all-terms{
+    margin-top: 4px;
+    display: flex;
+    gap: .75rem;
+    align-items: flex-start;
+
+    & strong{
+        font-weight: 500;
+        color: var(--brand-light);
+        text-decoration: underline;
+    }
+}
+
+.check-terms {
+    position: relative;
+    gap: 12px;
+
+    & strong {
+        font-weight: bold;
+    }
+
+    & input[type="checkbox"]{
+        all: unset;
+        position: absolute;
+        inset: 0;
+    }
+
+    .checkbox-image {
+        flex: 0 0 1.5rem;
+        height: 20px;
+        width: 20px;
+
+        background-image: url(../../assets/icons/check-default.svg);
+        background-repeat: no-repeat;
+    }
+
+    &:has(:checked){
+
+        & .checkbox-image {
+            background-image: url(../../assets/icons/check-checked.svg);
+        }
+    }
+}
+
+
+

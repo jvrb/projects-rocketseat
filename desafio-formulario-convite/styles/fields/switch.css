@@ -1,0 +1,57 @@
+.switch-wrappper{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  & span{
+    font: var(--body-sm);
+    color: var(--text-heading);
+  }
+
+  & .switch-input{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+}
+
+/* Estilização base */
+.toggle {
+  position: relative;
+  width: 60px;
+  height: 30px;
+  background-color: var(--input-base);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  outline: 1px solid var(--input-stroke);
+}
+
+/* Botão interno (círculo) */
+.toggle::before {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  background-color: var(--input-stroke);
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.3s ease;
+}
+
+/* Ocultando o checkbox */
+.personalization input[type="checkbox"] {
+  display: none;
+}
+
+/* Estilo quando o toggle está ativo (checkbox marcado) */
+input[type="checkbox"]:checked + .toggle {
+  background-color: var(--brand-light); /* Cor do botão ativo */
+}
+
+input[type="checkbox"]:checked + .toggle::before {
+  transform: translateX(30px); /* Move o círculo para a direita 
+  */
+  background-color: var(--text-heading)
+}
