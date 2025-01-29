@@ -1,0 +1,27 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 1.25rem;
+
+    & > div {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    & a {
+        padding: 4px;
+    }
+
+    & .profilepic{
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    @media(width >= 70rem){
+        & .desktop-only {
+            display: block;
+        }
+    }
+}

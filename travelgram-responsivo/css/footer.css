@@ -1,0 +1,26 @@
+footer{
+    background-color: var(--background-color);
+    padding-block: 1.5rem;
+    font: var(--fs-md);
+    color: var(--text-color-secondary);
+    align-items: center;
+    text-align: center;
+
+    & .container{
+        align-items: center;
+        & .grid{
+            margin-top: 13.5px;
+            grid-auto-flow: column;
+            gap: 1rem;
+        }
+    }
+}
+
+@media (width >= 70rem) {
+    footer {
+        & div {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
