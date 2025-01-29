@@ -1,5 +1,7 @@
 #profile {
     display: grid;
+    justify-content: center;
+    padding-block: 2rem;
     gap: 2rem;
 
     & h2 {
