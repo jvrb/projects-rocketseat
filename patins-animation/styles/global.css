@@ -1,0 +1,50 @@
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /* Marca */
+    --snitap-sun: #FFCD1E;
+    --snitap-sky-mid: #06B6D4;
+    --snitap-sky-light: #67E8F9;
+    --snitap-joy-mid: #DB2777;
+    --snitap-joy-light: #F472B6;
+    --snitap-leaf-mid: #16A34A;
+
+    /* Base */
+    --text: #000000;
+    --highlights: #000000;
+    --background: #FAFAFA;
+
+    /* Font Family*/
+    --ff-syne: 'Syne', sans-serif;
+    --ff-montserrat: 'Montserrat', sans-serif;
+
+    /* Font Size */
+    --text-sm: 0.875rem;
+    --text-base: 1rem;
+    --text-lg: 2.5rem;
+    --text-xl: 4rem;
+
+    /* Fontes */
+    --f-heading1: 700 var(--text-xl)/1.25 var(--ff-syne);
+    --f-heading2: 700 var(--text-lg)/1.2 var(--ff-syne);
+
+    --f-btn-label: 500 var(--text-base)/1.5 var(--ff-montserrat);
+    --f-span: 500 var(--text-sm)/1.5 var(--ff-montserrat);
+
+}
+
+html, button {
+    font: var(--f-btn-label);
+}
+
+h1{
+    font: var(--f-heading1);
+}
+
+h2{
+    font: var(--ff-heading2);
+}
