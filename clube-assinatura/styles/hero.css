@@ -1,0 +1,111 @@
+section.hero {
+    height: 100vh;
+    position: relative;
+    padding-top: 3.5rem;
+    
+    &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: inherit;
+        background: url("/assets/images/hero-background.png") center center no-repeat;
+        background-position: top;
+        top: -5px;
+        background-size: contain;
+        z-index: -1;
+
+        animation: appear 300ms ease backwards;
+    }
+
+    & header {
+        display: flex;
+        position: relative;
+        max-width: 70rem;
+        margin-inline: auto;
+        height: 3.625rem;
+        align-items: center;
+        justify-content: space-between;
+
+        & button {
+            width: 5.5625rem;
+            height: 2.5rem;
+            border-radius: 8px;
+            border: 0;
+            background: var(--pink-dark);
+            font: var(--fs-button);
+            color: var(--text-title);
+
+            & span {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 5.5625rem;
+                height: 2.5rem;
+                position: relative;
+                z-index: 1;
+
+                &:hover::before {
+                    scale: 1;
+                    overflow: hidden;
+                }
+    
+                &::before {
+                    content: "";
+    
+                    width: inherit;
+                    height: inherit;
+                    border-radius: 8px;
+    
+                    background: var(--pink-base);
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: -1;
+    
+                    scale: 0;
+                    transition: scale 300ms ease;
+                }
+            }
+            
+
+            
+        }
+
+    }
+
+    & .title {
+        width: 41rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-inline: auto;
+        margin-top: 10.25rem;
+
+        & h1 {
+            font: var(--fs-title-lg);
+            color: var(--text-title);
+            text-align: center;
+            animation: appear 2s ease backwards;
+        }
+
+        & p {
+            width: 35.5rem;
+            margin-top: 2rem;
+            font: var(--fs-body-lg);
+            color: var(--text-body);
+            text-align: center;
+            animation: appear 3s 500ms ease-in backwards;
+        }
+    }
+
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
