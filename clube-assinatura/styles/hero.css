@@ -3,18 +3,21 @@ section.hero {
     position: relative;
     padding-top: 3.5rem;
     
-    &::after {
-        content: "";
-        position: absolute;
-        width: 100%;
+    & .container {
         height: inherit;
-        background: url("/assets/images/hero-background.png") center center no-repeat;
-        background-position: top;
-        top: -5px;
-        background-size: contain;
-        z-index: -1;
-
-        animation: appear 300ms ease backwards;
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: inherit;
+            background: url("/assets/images/hero-background.png") center center no-repeat;
+            background-position: top;
+            top: 0;
+            background-size: contain;
+            z-index: -1;
+    
+            animation: appear 300ms ease backwards;
+        }
     }
 
     & header {
@@ -98,6 +101,109 @@ section.hero {
         }
     }
 
+    & section.text-animated {
+        margin-top: 6rem;
+        width: 75rem;
+        height: 25rem;
+        margin-inline: auto;
+        text-align: center;
+
+        & span {
+            display: inline;
+            font: var(--fs-subtitle);
+            text-align: center;
+            color: var(--text-body);
+            opacity: .5;
+        }
+        & img {
+            width: 5.5rem;
+            height: 5.5rem;
+        }
+
+        & .img-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            & img[src*="planchette"]{
+                transform: rotate(99.47deg);
+                scale: 0;
+                transition: scale 1s;
+            }
+            
+            & img[src*="crystal-ball"]{
+                transform: rotate(-14.48deg);
+                scale: 0;
+                transition: scale 1s;
+            }
+        }
+
+        & img[src*="spellbook"] {
+            transform: rotate(20.76deg);
+            scale: 0;
+            transition: scale 1s;
+            display: flex;
+            margin-inline: auto;
+        }
+
+        &:hover {
+            & img[src*="spellbook"] {
+                scale: 1;
+                transition: scale 500ms;
+            }
+
+            & img[src*="planchette"]{
+                scale: 1;
+                transition: scale 500ms .5s;
+            }
+            & img[src*="crystal-ball"]{
+                scale: 1;
+                transition: scale 500ms 1s;
+            }
+
+            & span:nth-child(2) {
+                opacity: 1;
+                transition: opacity 200ms;
+
+                & strong {
+                    color: var(--blue-light);
+                    transition: color 200ms;
+                }
+            }
+            & span:nth-child(3) {
+                opacity: 1;
+                transition: opacity 200ms 500ms;
+                & strong {
+                    color: var(--blue-light);
+                    transition: color 200ms 500ms;
+                }
+            }
+            & span:nth-child(4) {
+                opacity: 1;
+                transition: opacity 200ms 1s;
+                & strong {
+                    color: var(--blue-light);
+                    transition: color 200ms 1s;
+                }
+            }
+
+            & img:hover {
+                scale: 1.1;
+                rotate: 10deg;
+                transition: scale 500ms, rotate 600ms;
+            }
+
+            & .img-bottom img:hover {
+                scale: 1.1;
+                rotate: 10deg;
+                transition: scale 500ms, rotate 600ms;
+            }
+        
+        }
+
+        
+    }
+
 }
 
 @keyframes appear {
@@ -108,4 +214,8 @@ section.hero {
     to{
         opacity: 1;
     }
+}
+
+@keyframes zoomIn {
+
 }
