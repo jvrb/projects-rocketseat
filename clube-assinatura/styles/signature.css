@@ -1,0 +1,133 @@
+section.signature {
+    padding-top: 12.125rem;
+    margin-inline: auto;
+    width: 65.625rem;
+    position: relative;
+    background: url('assets/images/pricing-background.png');
+    
+    & header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        font: var(--fs-title-sm);
+        color: var(--text-title);
+        gap: .5rem;
+    }
+
+    & .prices {
+        display: flex;
+        justify-content: center;
+        position: relative;
+
+        & .cardPrice {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 18rem;
+            height: 26rem;
+            padding: 2rem;
+            background: var(--shape-base);
+            border: 1px solid var(--shape-stroke);
+            border-radius: 2rem;
+
+            & header {
+                display: flex;
+                align-items: start;
+
+                & > strong {
+                    font: var(--fs-title-sx);
+                }
+                
+                & .price {
+                    margin-top: 1.5rem;
+                    & strong {
+                        font: var(--fs-title-md);
+                    }
+
+                    & span {
+                        font: var(--fs-title-sx);
+                    }
+                }
+
+                & p {
+                    font: var(--fs-body-sm);
+                    color: var(--text-label);
+                    margin-top: .5rem;
+                }
+            }
+
+            & .beneficios{
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+
+                & > div {
+                    display: flex;
+                    align-items: center;
+
+                    font: var(--fs-body-xs);
+                    color: var(--text-body);
+                    gap: 6px;
+                }
+
+                & button {
+                    margin-top: 1.5rem;
+                    width: 100%;
+                    height: 2.5rem;
+                    color: var(--text-title);
+                    font: var(--fs-button);
+                    border-radius: .5rem;
+                }
+            }      
+        }
+
+        & .mensal {
+            top: 15rem;
+            left: 5.625rem;
+            rotate: -8deg;
+            & > img:nth-child(1) {
+                position: absolute;
+                width: 13px;
+                top: 0.625rem;
+                left: -1.875rem;
+            }
+            & > img:nth-child(2) {
+                position: absolute;
+                width: 26px;
+                top: -1.5625rem;
+                left: -1.25rem;
+            }
+        }
+        & .semestral {
+            top: 11rem;
+            & > img:nth-child(1) {
+                width: 2.81rem;
+                height: 3.125rem;
+                position: absolute;
+                top: -3.125rem;
+            }
+        }
+        & .anual {
+            top: 15rem;
+            left: 41.875rem;
+            rotate: 8deg;
+            z-index: -1;
+
+            & > img:nth-child(1) {
+                position: absolute;
+                width: 11px;
+                bottom: -1.5rem;
+                right: 0.2rem;
+            }
+            & > img:nth-child(2) {
+                position: absolute;
+                width: 23px;
+                bottom: -1rem;
+                right: -3rem;
+            }
+        }
+
+    }
+}

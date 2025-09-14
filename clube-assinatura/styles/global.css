@@ -33,7 +33,7 @@
     --fs-title-lg: 700 3rem/1 var(--ff-raleway);
     --fs-title-md: 700 2.5rem/1 var(--ff-raleway);
     --fs-title-sm: 700 2rem/1 var(--ff-raleway);
-    --fs-title-xs: 700 1rem/1 var(--ff-raleway);
+    --fs-title-sx: 700 1rem/1 var(--ff-raleway);
 
     --fs-subtitle: 500 2rem/2 var(--ff-raleway);
 
@@ -60,3 +60,16 @@ button {
     border: none;
 }
 
+.color-pink-light {
+    color: var(--pink-light);
+}
+.color-blue-light {
+    color: var(--blue-light);
+}
+
+.bg-pink-dark {
+    background: var(--pink-dark);
+}
+.bg-blue-dark {
+    background: var(--blue-dark);
+}
