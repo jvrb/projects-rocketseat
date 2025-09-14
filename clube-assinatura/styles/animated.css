@@ -1,0 +1,103 @@
+section.animated {
+    margin-top: 6rem;
+    margin-inline: auto;
+    margin-bottom: 5rem;
+    max-width: 75rem;
+    height: 25rem;
+    text-align: center;
+
+    & span {
+        display: inline;
+        font: var(--fs-subtitle);
+        text-align: center;
+        color: var(--text-body);
+        opacity: .5;
+    }
+    & img {
+        width: 5.5rem;
+        height: 5.5rem;
+    }
+
+    & .img-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        & img[src*="planchette"]{
+            transform: rotate(99.47deg);
+            scale: 0;
+            transition: scale 1s;
+        }
+        
+        & img[src*="crystal-ball"]{
+            transform: rotate(-14.48deg);
+            scale: 0;
+            transition: scale 1s;
+        }
+    }
+
+    & img[src*="spellbook"] {
+        transform: rotate(20.76deg);
+        scale: 0;
+        transition: scale 1s;
+        display: flex;
+        margin-inline: auto;
+    }
+
+    &:hover {
+        & img[src*="spellbook"] {
+            scale: 1;
+            transition: scale 500ms;
+        }
+
+        & img[src*="planchette"]{
+            scale: 1;
+            transition: scale 500ms .5s;
+        }
+        & img[src*="crystal-ball"]{
+            scale: 1;
+            transition: scale 500ms 1s;
+        }
+
+        & span:nth-child(2) {
+            opacity: 1;
+            transition: opacity 200ms;
+
+            & strong {
+                color: var(--blue-light);
+                transition: color 200ms;
+            }
+        }
+        & span:nth-child(3) {
+            opacity: 1;
+            transition: opacity 200ms 500ms;
+            & strong {
+                color: var(--blue-light);
+                transition: color 200ms 500ms;
+            }
+        }
+        & span:nth-child(4) {
+            opacity: 1;
+            transition: opacity 200ms 1s;
+            & strong {
+                color: var(--blue-light);
+                transition: color 200ms 1s;
+            }
+        }
+
+        & img:hover {
+            scale: 1.1;
+            rotate: 10deg;
+            transition: scale 500ms, rotate 600ms;
+        }
+
+        & .img-bottom img:hover {
+            scale: 1.1;
+            rotate: 10deg;
+            transition: scale 500ms, rotate 600ms;
+        }
+    
+    }
+
+    
+}
