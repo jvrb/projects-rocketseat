@@ -1,0 +1,154 @@
+header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 7px;
+	margin-top: 1.56rem;
+
+	font: var(--f-logo);
+	color: var(--content-secondary);
+}
+
+main {
+	margin-top: 3.875rem;
+	display: flex;
+	justify-content: center;
+	& #container {
+		width: 39.18rem;
+
+		& a {
+			font: var(--f-link);
+			text-decoration: none;
+			color: var(--color-brand);
+		}
+
+		& h1 {
+			margin-top: 1rem;
+			font: var(--f-title);
+		}
+
+		& form {
+			margin-top: 2.75rem;
+			display: flex;
+			justify-content: space-between;
+			& input {
+				width: 28.18rem;
+				height: 2.75rem;
+				padding-left: 1.125rem;
+				border-radius: 0.75rem;
+				border: none;
+				outline: 2px solid var(--border-primary);
+				font: var(--f-input);
+				color: var(--content-tertiary);
+			}
+
+			& button {
+				padding: 0.75rem 1.5rem;
+				border-radius: 0.75rem;
+				border: none;
+				background-color: var(--color-brand);
+
+				font: var(--f-label);
+				color: var(--content-always-white);
+			}
+		}
+
+		& #result {
+			display: flex;
+			flex-direction: column;
+			margin-top: 2.5rem;
+			gap: .5rem;
+
+			& .itemList {
+				width: 100%;
+				display: flex;
+				gap: 1.25rem;
+				justify-content: space-between;
+				align-items: center;
+				padding: 0.5rem 0.75rem;
+				background-color: var(--bg-secondary);
+				border-radius: 0.75rem;
+
+				& .checkbox-wrapper {
+					position: relative;
+					display: flex;
+					align-items: center;
+					width: 100%;
+					gap: .75rem;
+
+					& [type="checkbox"] {
+						all: unset;
+						position: absolute;
+						inset: 0;
+					}
+
+					& .checkbox-custom {
+						width: 1rem;
+						height: 1rem;
+						
+						background-image: url(../assets/icons/checkbox-default.svg);
+					}
+
+					&:hover, &:focus-within {
+						.checkbox-custom {
+							background-image: url(../assets/icons/checkbox-hover.svg);
+						}
+					}
+
+					&:has(:checked) .checkbox-custom {
+						background-image: url(../assets/icons/checkbox-checked.svg);
+					}
+
+					& p {
+						font: var(--f-paragraph);
+					}
+
+					&:has(:checked) p {
+						text-decoration: line-through;
+					}
+
+				}
+
+				& button {
+					background-color: transparent;
+					border: none;
+					width: 2rem;
+					height: 2rem;
+					cursor: pointer;
+
+					& img {
+						width: 1rem;
+						height: 1rem;
+					}
+				}
+			}
+		}
+
+		& .mensagemDelete{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 0.75rem;
+			border-radius: 0.75rem;
+			margin-top: 1.652rem;
+
+			background-color: var(--color-danger);
+
+			& .alertIcon {
+				width: 1rem;
+				height: 1rem;
+			}
+
+			& #closeMsgDelete{
+				cursor: pointer;
+			}
+
+			& img + p {
+				width: 95%;
+				margin-left: 8px;
+				font: var(--f-label);
+				color: var(--bg-secondary);
+			}
+		}
+	}
+}
