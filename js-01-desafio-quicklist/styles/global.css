@@ -1,0 +1,32 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+    /* FONT FAMILY */
+    --ff-sora: "Sora", sans-serif;
+    --ff-inter: "Inter", sans-serif;
+
+    /*  COLORS */
+    --color-brand: #CA3884;
+    --color-danger: #C93847;
+
+    --content-always-white: #FFFFFF;
+    --content-primary: #080B12;
+    --content-secondary: #374151;
+    --content-tertiary: #9CA3AF;
+    --content-quarter: #111827;
+
+    --border-primary: #D1D5DB;
+    --bg-primary: #F4F5FB;
+
+    --f-logo: 700 1.66rem/2.5 var(--ff-sora);
+    --f-label: 600 1rem/1.25 var(--ff-inter);
+    --f-title: 700 1.5rem/2 var(--ff-inter);
+    --f-paragraph: 500 1rem/1.5 var(--ff-inter);
+    --f-link: 500 0.875rem/1 var(--ff-inter);
+    --f-input: 400 1rem/140 var(--ff-inter);
+
+}
