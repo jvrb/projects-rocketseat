@@ -21,6 +21,7 @@
 
     --border-primary: #D1D5DB;
     --bg-primary: #F4F5FB;
+    --bg-secondary: #ffff;
 
     --f-logo: 700 1.66rem/2.5 var(--ff-sora);
     --f-label: 600 1rem/1.25 var(--ff-inter);
@@ -29,4 +30,8 @@
     --f-link: 500 0.875rem/1 var(--ff-inter);
     --f-input: 400 1rem/140 var(--ff-inter);
 
+}
+
+body {
+    background-color: var(--bg-primary);
 }

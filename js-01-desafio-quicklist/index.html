@@ -9,5 +9,26 @@
 		<link rel="stylesheet" href="./styles/index.css" />
 		<title>Quicklist JS</title>
 	</head>
-	<body></body>
+	<body>
+		<header>
+			<img src="./assets/icons/Rareblocks.svg" alt="">
+			<span>quicklist</span>
+		</header>
+
+		<main>
+			<div id="container">
+				<a href="#"><- Voltar</a>
+				<h1>Compras da Semana</h1>
+				<form id="formList">
+					<input type="text" required placeholder="Adicione um novo item" name="inputItem" id="inputItem">
+					<button>Adicionar Item</button>
+				</form>
+				<div id="result">
+				</div>
+				<div id="msgerror"></div>
+			</div>
+		</main>
+
+		<script src="./script.js"></script>
+	</body>
 </html>
