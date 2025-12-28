@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght,XOPQ,XTRA,YOPQ,YTDE,YTFI,YTLC,YTUC@8..144,100..1000,96,468,79,-203,738,514,712&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sora:wght@100..800&display=swap"
+			rel="stylesheet"
+		/>
+		<title>Sorteador de Números</title>
+	</head>
+	<body>
+		<section class="container">
+			<header>
+				<a href="./index.html">
+					<img src="./assets/logo.svg" alt="Logo Numbers" />
+				</a>
+			</header>
+			<div class="content">
+				<div class="content-header">
+					<p>ONLINE - GRATUITO</p>
+					<h1>SORTEADOR DE NÚMEROS</h1>
+				</div>
+				<div class="content-faq">
+					<div class="faq-quest">
+						<p>
+							<img src="./assets/faqIcon.svg" alt="" />
+							Como funciona o sorteador de números?
+						</p>
+						<p>O sorteador utiliza um algoritmo de geração aleatória para criar números dentro do intervalo especificado pelo usuário.</p>
+					</div>
+					<div class="faq-quest">
+						<p>
+							<img src="./assets/faqIcon.svg" alt="" />
+							Posso escolher o intervalo dos números?
+						</p>
+						<p>Sim, você pode definir os valores mínimo e máximo para o intervalo dos números sorteados.</p>
+					</div>
+				</div>
+				<div class="content-form" id="contentFormId">
+					<h3>Quero sortear:</h3>
+					<p>defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É rápido e fácil!</p>
+					<form id="sortNumbersForm">
+						<div class="labels">
+							<label for="numbers">
+								NÚMEROS:
+								<input type="number" name="numbers" id="numbers" maxlength="10" required/>
+							</label>
+							<label for="start">
+								DE:
+								<input type="number" name="start" id="start" required/>
+							</label>
+							<label for="end">
+								ATÉ:
+								<input type="number" name="end" id="end" required/>
+							</label>
+						</div>
+
+						<label for="togglebtn" class="toggle-button">
+							<label class="switch">
+								<input type="checkbox" id="togglebtn" />
+								<span class="slider round"></span>
+							</label>
+							<p>Não repetir número</p>
+						</label>
+						<button>
+							<p>Sortear</p>
+							<img src="./assets/setaIcon.svg" alt="" />
+						</button>
+					</form>
+				</div>
+			</div>
+		</section>
+
+		<script src="./script.js"></script>
+	</body>
+</html>

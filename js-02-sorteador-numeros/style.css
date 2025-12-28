@@ -1,0 +1,504 @@
+:root {
+	/* COLORS */
+	--c-content-primary: #fff;
+	--c-content-secondary: #c7c9cc;
+	--c-content-tertiary: #d9d9d9;
+	--c-content-brand: #c58de7;
+	--c-color-inverse: #030203;
+	--c-background-primary: #020202;
+	--c-background-secondary: #111012;
+	--c-background-tertiary: #24222e;
+	--c-background-brand: #c58de7;
+	--c-background-gray: #3d3d3d;
+	--c-ascent-pink: #d586e0;
+	--c-ascent-blue: #91a1fa;
+	--c-ascent-green: #77c0aa;
+	--c-ascent-lime: #d1dc97;
+	--c-ascent-red: #e9a9b3;
+	--c-gradient-border: linear-gradient(#77c0af 0%, #d1dc97 14.84%, #e9a9b3 32.15%, #d586e0 65.79%, #91a1fa 84.58%);
+	--c-gradient-background: linear-gradient(#d586e0 0%, #91a1fa 98.93%);
+	--c-gradient-content: linear-gradient(#c7c9cc 0%, #3d3d3d 100%);
+
+	/* FONTS */
+	--f-sora: "Sora", sans-serif;
+	--f-roboto-mono: "Roboto Mono", monospace;
+	--f-robot-flex: "Roboto Flex", sans-serif;
+
+	--f-display-large: 800 4.5rem/1.3 var(--f-sora);
+	--f-display-medium: 800 2.5rem/1.3 var(--f-sora);
+	--f-display-small: 700 2rem/1.3 var(--f-sora);
+
+	--f-overline: 700 1rem/1.5 var(--f-roboto-mono);
+
+	--f-paragraph-large: 500 1rem/1.5 var(--f-robot-flex);
+	--f-paragraph-medium: 500 0.875rem/1.5 var(--f-robot-flex);
+	--f-paragraph-small: 500 0.75rem/1.5 var(--f-robot-flex);
+	--f-label-large: 700 1.25rem/1.5 var(--f-robot-flex);
+	--f-label-medium: 700 1rem/1.5 var(--f-robot-flex);
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh;
+	min-width: 100vw;
+	background-image: linear-gradient(to bottom, black 20%, transparent), url("./assets/Shapes.png");
+	background-color: var(--c-background-primary);
+	color: var(--c-content-primary);
+}
+
+.container {
+	width: 68.62rem;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+}
+
+header {
+	margin-top: 4.75rem;
+}
+
+.content {
+	display: grid;
+	grid-template-areas:
+		"cont-header cont-form"
+		"cont-faq cont-form";
+	row-gap: 2.25rem;
+	column-gap: 6.7rem;
+	margin-top: 5.56rem;
+	align-items: center;
+}
+.content-header {
+	grid-area: cont-header;
+}
+
+.content-header p {
+	font: var(--f-overline);
+	background: var(--c-gradient-content);
+	-webkit-background-clip: text; /* recorta o background no texto */
+	-webkit-text-fill-color: transparent;
+}
+
+.content-header h1 {
+	font: var(--f-display-large);
+	color: var(--c-content-primary);
+}
+
+.content-faq {
+	grid-area: cont-faq;
+	display: flex;
+	flex-direction: column;
+	gap: 2.25rem;
+	margin-top: 2.375rem;
+}
+
+.faq-quest p:nth-child(1) {
+	display: flex;
+	gap: 0.5rem;
+	color: var(--c-content-brand);
+	font: var(--f-paragraph-medium);
+
+	img {
+		width: 1.25rem;
+		height: 1.25rem;
+	}
+}
+
+.faq-quest p:nth-child(2) {
+	font: var(--f-paragraph-small);
+	color: var(--c-content-secondary);
+	padding-left: 1.75rem;
+}
+
+.content-form {
+	width: 30.12rem;
+	height: auto;
+	margin-block: auto;
+	grid-area: cont-form;
+}
+
+.content-form h3 {
+	font: var(--f-label-large);
+	text-transform: uppercase;
+}
+
+.content-form > p {
+	font: var(--f-paragraph-large);
+}
+
+.content-form form {
+	display: flex;
+	flex-direction: column;
+	margin-top: 2.5rem;
+
+	button {
+		margin-top: 2.5rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 0.5rem;
+		width: 30.12rem;
+		height: 3.5rem;
+		background-color: var(--c-background-tertiary);
+		border: none;
+		border-radius: 0.5rem;
+
+		font: var(--f-label-medium);
+		text-transform: uppercase;
+		color: var(--c-content-primary);
+	}
+}
+
+.content-form form .labels {
+	display: flex;
+	gap: 0.75rem;
+
+	label {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		text-align: center;
+
+		font: var(--f-label-medium);
+	}
+
+	input {
+		width: 5.37rem;
+		height: 3.5rem;
+		padding: 0.25rem 0.5rem;
+		font: var(--f-display-small);
+		color: var(--c-content-primary);
+		text-align: center;
+		border-radius: 0.5rem;
+		border: none;
+		background-color: var(--c-background-secondary);
+	}
+	input[type="number"]::-webkit-inner-spin-button,
+	input[type="number"]::-webkit-outer-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+}
+
+.content-form form .toggle-button {
+	display: flex;
+	margin-top: 1.31rem;
+	gap: 0.5rem;
+	font: var(--f-label-medium);
+}
+
+.content-form form .toggle-button .switch {
+	position: relative;
+	display: inline-block;
+	width: 30px;
+	height: 20px;
+	padding: 1px;
+}
+
+.content-form form .toggle-button .switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.content-form form .toggle-button .slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+	background-color: #ccc;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+.content-form form .toggle-button .slider:before {
+	position: absolute;
+	content: "";
+	height: 14px;
+	width: 14px;
+	left: 2px;
+	bottom: 3px;
+	background-color: white;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+.content-form form .toggle-button input:checked + .slider {
+	background: var(--c-gradient-background);
+}
+
+.content-form form .toggle-button input:focus + .slider {
+	box-shadow: 0 0 1px #2196f3;
+}
+
+.content-form form .toggle-button input:checked + .slider:before {
+	-webkit-transform: translateX(12px);
+	-ms-transform: translateX(12px);
+	transform: translateX(12px);
+}
+
+.content-form form .toggle-button .slider.round {
+	border-radius: 34px;
+}
+
+.content-form form .toggle-button .slider.round:before {
+	border-radius: 50%;
+}
+
+.content-form form button:hover img {
+	animation-duration: 500ms;
+	animation-direction: alternate;
+	animation-iteration-count: 6;
+	animation-name: slidein;
+	
+}
+
+.content-form form button {
+	position: relative; /* cria contexto */
+	border-radius: 0.5rem;
+	background: #111; /* fundo do botão */
+	color: #fff;
+	z-index: 0;
+	overflow: hidden; /* garante que o ::after respeite o radius */
+}
+
+.content-form form button:hover::after {
+	cursor: pointer;
+	animation-name: borderanimation;
+	animation-duration: 2s;
+	animation-direction: normal;
+	animation-iteration-count: infinite;
+	content: "";
+	position: absolute;
+	inset: 0; /* cobre toda a área do botão */
+	padding: 3px; /* espessura da borda */
+	border-radius: 12px;
+	background: linear-gradient(#77c0af 0%, #d1dc97 14.84%, #e9a9b3 32.15%, #d586e0 65.79%, #91a1fa 84.58%);
+	-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+	-webkit-mask-composite: xor;
+	mask-composite: exclude;
+	z-index: -1; /* fica atrás do conteúdo do botão */
+}
+.divResult {
+	margin-block: auto;
+}
+
+.divResult header{
+	text-align: center;
+
+}
+
+.divResult header h3 {
+	font: var(--f-label-large);
+}
+
+.divResult header p {
+	margin-top: 4px;
+	font: var(--f-overline);
+}
+
+.divResult p {
+	position: relative;
+}
+
+.divResult .bodyResult {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 2rem;
+}
+
+
+
+.divResult .bodyResult p {
+	width: 100px;
+	animation: opacityIn 3s ease backwards;
+	color: var(--c-ascent-pink);
+	font: var(--f-display-medium)
+}
+
+.divResult .bodyResult .blockDiv {
+	margin-top: 3rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.divResult .bodyResult .blockDiv::before {
+	content: "";
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	background-image: url("./assets/Rectangle.svg");
+	background-size: cover;
+	z-index: -1;
+	transform-origin: center;
+	animation: animationBlock 3s ease forwards;
+}
+.divResult button {
+	width: 30.12rem;
+	height: 3.5rem;
+	margin-top: 5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: .5rem;
+	font: var(--f-label-medium);
+	position: relative; /* cria contexto */
+	border: none;
+	border-radius: .5rem;
+	background: #111; /* fundo do botão */
+	color: #fff;
+	cursor: pointer;
+	z-index: 0;
+	overflow: hidden; /* garante que o ::after respeite o radius */
+}
+
+.divResult button:hover img {
+	animation-duration: 1s;
+	animation-fill-mode: backwards;
+	animation-name: rotateIcon;
+}
+
+.divResult button:disabled{
+	opacity: 0.5;
+	cursor: not-allowed;
+	
+}
+
+.divResult button:disabled img, .divResult button:disabled::after{
+	animation: none;
+	background: none;
+}
+
+.divResult button:hover::after {
+	
+	animation-name: borderanimation;
+	animation-duration: 2s;
+	animation-direction: normal;
+	animation-iteration-count: infinite;
+	content: "";
+	position: absolute;
+	inset: 0; /* cobre toda a área do botão */
+	padding: 3px; /* espessura da borda */
+	border-radius: 12px;
+	background: linear-gradient(#77c0af 0%, #d1dc97 14.84%, #e9a9b3 32.15%, #d586e0 65.79%, #91a1fa 84.58%);
+	-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+	-webkit-mask-composite: xor;
+	mask-composite: exclude;
+	z-index: -1; /* fica atrás do conteúdo do botão */
+}
+
+
+@keyframes slidein {
+	0% {
+		
+		transform: translateX(0px);
+	}
+	100% {
+		transform: translateX(5px);
+	}
+}
+
+@keyframes borderanimation {
+	0% {
+		background: linear-gradient(90deg, #77c0af, #d1dc97, #e9a9b3, #d586e0, #91a1fa);
+	}
+	50% {
+		background: linear-gradient(180deg, #77c0af, #d1dc97, #e9a9b3, #d586e0, #91a1fa);
+	}
+	100% {
+		background: linear-gradient(360deg, #77c0af, #d1dc97, #e9a9b3, #d586e0, #91a1fa);
+	}
+}
+
+@keyframes rotateIcon{
+	0%{
+		transform: rotate(0deg);
+	}
+	90%{
+		opacity: 1;
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes animationBlock{
+	0%{
+		transform: rotate(0deg);
+	}
+	90%{
+		opacity: 1;
+	}
+	100%{
+		transform: rotate(360deg);
+		opacity: 0;
+	}
+}
+
+@keyframes opacityIn{
+	0%{
+		opacity: 0;
+	}
+	85%{
+		color: var(--c-color-inverse);
+		opacity: 1;
+	}
+}
+
+@media (max-width: 768px) {
+	.container {
+		max-width: 19.93rem;
+	}
+
+	header {
+		margin-top: 2.75rem;
+		text-align: center;
+	}
+
+	.content {
+		min-height: 100vh;
+		margin-top: 2.75rem;
+		display: grid;
+		grid-template-areas:
+			"titulo"
+			"content"
+			"quests";
+		grid-template-rows: auto auto auto;
+	}
+
+	.content-header {
+		margin: 0;
+		padding: 0;
+		grid-area: titulo;
+	}
+
+	.content-header h1 {
+		font: var(--f-display-medium);
+	}
+
+	.content-faq {
+		margin: 0;
+		grid-area: quests;
+	}
+
+	.content-form {
+		grid-area: content;
+		max-width: 19.93rem;
+	}
+
+	.content-form form button {
+		max-width: 19.93rem;
+	}
+}
