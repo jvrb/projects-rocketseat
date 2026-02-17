@@ -1,0 +1,74 @@
+.schedules {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    font-family: var(--f-inter);
+}
+
+.schedule-period {
+    background-color: var(--c-background-tertiary);
+    border-radius: 10px;
+}
+
+.schedule-period header .topHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.875rem 1.25rem;
+    border-bottom: 1px solid var(--c-border-primary);
+}
+
+.schedule-period header .bottomHeader {
+    list-style: none;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-items: center;
+    gap: 1rem;
+    padding: 1.25rem 1rem;
+    border-bottom: 1px solid var(--c-border-primary);
+}
+
+.schedule-period header > div {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.period {
+    padding: 1.25rem .5rem;
+}
+
+.period li {
+    list-style: none;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-items: center;
+    gap: 2rem;
+    padding: 1rem 0.75rem;
+    border-bottom: 1px solid var(--c-border-primary);
+}
+
+.period li > p > span, .period li span {
+    color: var(--c-content-secondary);
+    font: var(--fs-paragraph-small);
+}
+
+.period li .btnActions {
+    display: flex;
+    gap: 1rem;
+}
+
+.period li span > a {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.period li:last-child {
+    border-bottom: none;
+}

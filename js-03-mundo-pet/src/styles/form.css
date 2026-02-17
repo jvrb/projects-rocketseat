@@ -1,0 +1,129 @@
+#containerForm {
+	position: fixed;
+	z-index: -1;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	background: rgba(61, 61, 61, 0.1); /* fundo translúcido */
+	backdrop-filter: blur(4px);
+	opacity: 0;
+}
+
+#formNewSchedule {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	width: 29.81rem;
+	margin: 0 auto;
+	padding: 2.5rem;
+	background-color: var(--c-background-tertiary);
+	border-radius: 0.75rem;
+}
+
+#formNewSchedule #cancelSubmit {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	width: 2rem;
+	height: 2rem;
+	border-radius: 50%;
+	border: 1px solid var(--c-border-primary);
+	font: var(--fs-input-regular);
+	color: var(--c-content-secondary);
+	background-color: transparent;
+	cursor: pointer;
+}
+
+#formNewSchedule > header > h3 {
+	font: var(--fs-title);
+}
+
+#formNewSchedule > header > p {
+	color: var(--c-content-secondary);
+	font: var(--fs-paragraph-medium);
+}
+
+#formNewSchedule > .inputsForm {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	margin-top: 1.75rem;
+}
+
+#formNewSchedule .input-wrapper {
+	display: flex;
+	flex-direction: column;
+}
+
+#formNewSchedule .input-wrapper label {
+	font: var(--fs-label-medium);
+	margin-bottom: 4px;
+}
+
+#formNewSchedule .input-wrap {
+	display: flex;
+	align-items: center;
+}
+
+#formNewSchedule .input-wrap img {
+	position: absolute;
+	padding-left: 0.75rem;
+}
+
+#formNewSchedule .input-wrap input {
+	height: 3rem;
+	border: 1px solid var(--c-border-primary);
+	border-radius: 0.5rem;
+	background-color: transparent;
+	width: 100%;
+	padding-left: 2.5rem;
+	font: var(--fs-input-regular);
+	color: var(--c-content-secondary);
+}
+
+#formNewSchedule .input-wrap input:focus {
+	outline: 1px solid var(--c-border-brand);
+}
+
+#formNewSchedule .input-wrapper > textarea {
+	border: 1px solid var(--c-border-primary);
+	border-radius: 0.5rem;
+	background-color: transparent;
+	padding: 0.75rem;
+	font: var(--fs-input-regular);
+	color: var(--c-content-secondary);
+}
+
+#formNewSchedule .input-date {
+	display: flex;
+	flex-direction: row;
+	gap: 1rem;
+}
+
+#formNewSchedule .input-date div {
+	width: 100%;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+	-webkit-appearance: none;
+	appearance: none;
+	cursor: pointer;
+	background: url("../assets/seta.svg") no-repeat;
+	padding-right: 0.75rem;
+}
+
+.btntoschedule {
+	margin-top: 1.75rem;
+	text-transform: uppercase;
+	padding: 0.75rem 1.5rem;
+	background-color: var(--c-background-brand);
+	font: var(--fs-label-large);
+	border-radius: 8px;
+	border: none;
+	cursor: pointer;
+	box-shadow: 1px 1px 10px var(--c-background-brand);
+	transition: 100ms;
+}
