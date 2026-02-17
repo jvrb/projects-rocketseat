@@ -1,0 +1,34 @@
+:root {
+    /* Colors */
+    --c-content-primary: #fff;
+    --c-content-secondary: #98959D;
+    --c-content-tertiary: #666;
+    --c-content-brand: #9282FA;
+    --c-content-logo: #2e2c30;
+
+    --c-background-primary: #151515;
+    --c-background-secondary: #1E1E1E;
+    --c-background-tertiary: #23242C;
+    --c-background-brand: #9282fa;
+    --c-background-hightlights: #BDB4FA;
+    --c-background-body: #14151D;
+
+    --c-border-primary: #3E3C4A;
+    --c-border-secondary: #86818C;
+    --c-border-brand: #9282FA;
+    --c-border-divisor: #353339;
+
+    /* Fonts */
+    --f-inter-tight: "Inter Tight", sans-serif;
+    --f-inter: "Inter", sans-serif;
+
+    /* Tipography */
+    --fs-title: 700 1.5rem/2 var(--f-inter-tight);
+    --fs-paragraph-medium: 500 0.875rem/1.5 var(--f-inter);
+    --fs-paragraph-small: 500 0.75rem/1 var(--f-inter);
+    --fs-label-large: 700 1rem/1.5 var(--f-inter);
+    --fs-label-medium: 700 0.875rem/1.5 var(--f-inter);
+    --fs-label-small: 700 0.75rem/1 var(--f-inter);
+    --fs-link: 500 0.75rem/1 var(--f-inter);
+    --fs-input-regular: 400 1rem/1.5 var(--f-inter);
+}

@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="pt-BR">
+	<head>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+			rel="stylesheet"
+		/>
+
+		<title>Mundo Pet</title>
+	</head>
+	<body>
+		<div class="logo">
+			<div>
+				<img src="./src/assets/Dog-Duotone--Streamline-Phosphor.svg" alt="Desnho de um cachorro" />
+				<span>MUNDO PET</span>
+			</div>
+		</div>
+		<div class="container">
+			<header>
+				<div class="headerDesc">
+					<h2>Sua agenda</h2>
+					<p>Aqui você pode ver todos os clientes e serviços agendados para hoje.</p>
+				</div>
+				<input type="date" name="selectedDate" id="selectedDate" />
+			</header>
+			<section class="schedules">
+				<section class="schedule-period">
+					<header>
+						<div class="topHeader">
+							<div>
+								<img src="./src/assets/Sun Fog.svg" alt="Manhã" />
+								<strong>Manhã</strong>
+							</div>
+							<span>09h-12h</span>
+						</div>
+						<div class="bottomHeader">
+							<p>Horario</p>
+							<p>Nome Pet / Tutor</p>
+							<p>Serviço</p>
+							<p>Ações</p>
+						</div>
+					</header>
+					<ul id="period-morning" class="period"></ul>
+				</section>
+				<section class="schedule-period">
+					<header>
+						<div class="topHeader">
+							<div>
+								<img src="./src/assets/Cloud Sun 4.svg" alt="Tarde" />
+								<strong>Tarde</strong>
+							</div>
+							<span>13h-18h</span>
+						</div>
+						<div class="bottomHeader">
+							<p>Horario</p>
+							<p>Nome Pet / Tutor</p>
+							<p>Serviço</p>
+							<p>Ações</p>
+						</div>
+					</header>
+					<ul id="period-afternoon" class="period"></ul>
+				</section>
+				<section class="schedule-period">
+					<header>
+						<div class="topHeader">
+							<div>
+								<img src="./src/assets/Moon-Stars--Streamline-Solar.svg" alt="Noite" />
+								<strong>Noite</strong>
+							</div>
+							<span>19h-21h</span>
+						</div>
+						<div class="bottomHeader">
+							<p>Horario</p>
+							<p>Nome Pet / Tutor</p>
+							<p>Serviço</p>
+							<p>Ações</p>
+						</div>
+					</header>
+					<ul id="period-night" class="period"></ul>
+				</section>
+			</section>
+			<button id="btnNewSchedule">NOVO AGENDAMENTO</button>
+		</div>
+
+		<!-- CONTAINER DO FORMULARIO -->
+		<div id="containerForm">
+			<form id="formNewSchedule">
+				<button type="button" id="cancelSubmit">X</button>
+				<header>
+					<h3>Agende um atendimento</h3>
+					<p>Preencha os dados do cliente para realizar o agendamento:</p>
+				</header>
+				<div class="inputsForm">
+					<div class="input-wrapper">
+						<label for="nameTutor">Nome do tutor</label>
+						<div class="input-wrap">
+							<img src="./src/assets/User.svg" alt="" />
+							<input type="text" placeholder="Helena Souza" id="nametutor" name="nametutor" />
+						</div>
+					</div>
+					<div class="input-wrapper">
+						<label for="namepet">Nome do pet</label>
+						<div class="input-wrap">
+							<img src="./src/assets/PetPalm.svg" alt="" />
+							<input type="text" placeholder="Cheddar" id="namepet" name="namepet" />
+						</div>
+					</div>
+					<div class="input-wrapper">
+						<label for="phone">Telefone</label>
+						<div class="input-wrap">
+							<img src="./src/assets/Phone.svg" alt="" />
+							<input type="text" placeholder="(00) 0 0000-0000" id="phone" name="phone" />
+						</div>
+					</div>
+					<div class="input-wrapper">
+						<label for="descservice">Descrição do serviço</label>
+						<textarea name="descservice" id="descservice" rows="3"></textarea>
+					</div>
+					<div class="input-wrapper input-date">
+						<div>
+							<label for="newScheduleDate">Data</label>
+							<div class="input-wrap">
+								<input type="date" id="newScheduleDate" name="newScheduleDate" />
+								<img src="./src/assets/calendarIcon.svg" alt="" />
+							</div>
+						</div>
+						<div>
+							<label for="hourNewSchedule">Horario</label>
+							<div class="input-wrap">
+								<img src="./src/assets/ClockCircle.svg" alt="" />
+								<input type="time" name="hourNewSchedule" id="hourNewSchedule"/>
+							</div>
+						</div>
+					</div>
+				</div>
+				<button type="submit" class="btntoschedule" id="agendar">Agendar</button>
+				<div id="bottomForm"></div>
+			</form>
+		</div>
+	</body>
+</html>

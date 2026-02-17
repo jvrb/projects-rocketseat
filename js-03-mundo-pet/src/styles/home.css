@@ -1,0 +1,98 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--c-background-body);
+	color: var(--c-content-primary);
+}
+
+.logo {
+	position: absolute;
+	z-index: 999;
+	width: 10.3rem;
+	padding: 0.875rem 1.25rem;
+	background-color: var(--c-content-logo);
+	border-bottom-right-radius: 0.75rem;
+}
+
+.logo > div {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+	font-size: 1rem;
+	font-family: var(--f-inter);
+	font-weight: 800;
+	color: var(--c-content-brand);
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 54.43rem;
+	padding: 3.875rem 5rem;
+}
+
+.container > header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.container > header input {
+	height: 3rem;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	background-color: var(--c-background-body);
+	color: var(--c-content-secondary);
+	font-size: 1rem;
+	font-family: var(--f-inter);
+	padding-inline: 0.75rem;
+	border: 1px solid var(--c-border-primary);
+	border-radius: 8px;
+}
+
+input[type="date"]::before {
+	content: "";
+	width: 20px;
+	height: 20px;
+	background: url("../assets/calendarIcon.svg") no-repeat;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+	-webkit-appearance: none;
+	appearance: none;
+	cursor: pointer;
+	background: url("../assets/seta.svg") no-repeat;
+	padding-right: 0.75rem;
+}
+
+.headerDesc h2 {
+	font: var(--fs-title);
+}
+
+.headerDesc p {
+	color: var(--c-content-secondary);
+	font: var(--fs-paragraph-medium);
+}
+
+#btnNewSchedule {
+	position: fixed;
+	right: 1.875rem;
+	bottom: 1.875rem;
+	padding: 0.75rem 1.5rem;
+	background-color: var(--c-background-brand);
+	font: var(--fs-label-large);
+	border-radius: 8px;
+	border: none;
+	cursor: pointer;
+	box-shadow: 1px 1px 10px var(--c-background-brand);
+	transition: 100ms;
+}
+
+#btnNewSchedule:hover {
+	transform: scale(1.02);
+	box-shadow: 2px 1px 20px var(--c-background-brand);
+}
